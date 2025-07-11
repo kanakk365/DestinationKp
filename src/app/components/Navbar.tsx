@@ -144,7 +144,7 @@ const Navbar = () => {
             ))}
             <div className="pt-3 sm:pt-4 mt-3 sm:mt-4 border-t border-gray-600 space-y-2">
               <Link href="/login" onClick={() => setIsMobileMenuOpen(false)}>
-                <Button variant="solid" size="default" className="w-full">
+                <Button size="default" className="w-full">
                   Login
                 </Button>
               </Link>
