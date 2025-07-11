@@ -1,15 +1,30 @@
+/* Explore Facilities Button Gradient Hover Effect */
+.css-a0ww07::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -1px;
+  left: -1px;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 100ms ease-in-out, background-position 400ms ease-in-out;
+  border-radius: 4px;
+  box-sizing: content-box;
+  padding: 1px;
+  background: linear-gradient(to right, rgb(0, 143, 193), rgb(0, 240, 153), rgb(0, 143, 193), rgb(0, 240, 153)) 0% 0% / 300% 100%;
+}
+.css-a0ww07:hover::before {
+  opacity: 1;
+  background-position: 100% 0%;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
 @import "tailwindcss";
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +37,153 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Radix UI Navigation Menu animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOutToLeft {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOutToRight {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes zoomOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}
+
+/* Custom animation classes */
+.animate-in {
+  animation-fill-mode: both;
+}
+
+.animate-out {
+  animation-fill-mode: both;
+}
+
+.fade-in {
+  animation: fadeIn 200ms ease-out;
+}
+
+.fade-out {
+  animation: fadeOut 200ms ease-out;
+}
+
+.slide-in-from-left-52 {
+  animation: slideInFromLeft 300ms ease-out;
+}
+
+.slide-out-to-left-52 {
+  animation: slideOutToLeft 300ms ease-out;
+}
+
+.slide-in-from-right-52 {
+  animation: slideInFromRight 300ms ease-out;
+}
+
+.slide-out-to-right-52 {
+  animation: slideOutToRight 300ms ease-out;
+}
+
+.zoom-in-90 {
+  animation: zoomIn 200ms ease-out;
+}
+
+.zoom-out-95 {
+  animation: zoomOut 200ms ease-out;
+}
+
+/* Custom scrollbar for mobile menu */
+.mobile-menu::-webkit-scrollbar {
+  width: 4px;
+}
+
+.mobile-menu::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.mobile-menu::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 2px;
+}
+
+.mobile-menu::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
 }
