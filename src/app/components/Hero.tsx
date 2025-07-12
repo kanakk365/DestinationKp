@@ -1,14 +1,13 @@
 "use client";
 
 import React from "react";
-import Orb from "./ui/Orb";
 import { PointerHighlight } from "@/components/ui/pointer-highlight";
 
 const Hero = () => {
   return (
     <section
       id="voicebot-hero"
-      className="w-full bg-[#0b0b0c] text-white mt-20"
+      className="w-full bg-black text-white mt-20"
     >
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="w-full flex flex-col lg:flex-row items-center justify-between py-16 lg:py-24">
@@ -28,10 +27,9 @@ const Hero = () => {
                   <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 ">
                     Future of Long Island{" "}
                     <PointerHighlight
-                      rectangleClassName="bg-neutral-200 dark:bg-neutral-700 border-neutral-300 dark:border-neutral-600"
-                      pointerClassName="  text-purple-400 "
+                      pointerClassName="text-purple-500"
                     >
-                      <span className="relative z-10">Youth Sports</span>
+                      <span className="relative z-10 bg-gradient-to-r from-[#008fc1] via-[#00f099] to-[#008fc1] bg-clip-text text-transparent">Youth Sports</span>
                     </PointerHighlight>
                   </h1>
                 </div>
@@ -71,15 +69,19 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right Content - Orb */}
+          {/* Right Content - Video */}
           <div className="w-full lg:w-1/2 flex justify-center">
             <div className="w-96 h-96">
-              <Orb
-                hue={2}
-                hoverIntensity={0.3}
-                rotateOnHover={true}
-                forceHoverState={false}
-              />
+              <video
+                className="w-full h-full object-cover rounded-lg"
+                autoPlay
+                loop
+                muted
+                playsInline
+              >
+                <source src="/hero.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
           </div>
         </div>
