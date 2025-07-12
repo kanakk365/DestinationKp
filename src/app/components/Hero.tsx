@@ -27,7 +27,7 @@ const Hero = () => {
                   <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 ">
                     Future of Long Island{" "}
                     <PointerHighlight
-                      pointerClassName="text-purple-500"
+                      pointerClassName="text-cyan-400"
                     >
                       <span className="relative z-10 bg-gradient-to-r from-[#008fc1] via-[#00f099] to-[#008fc1] bg-clip-text text-transparent">Youth Sports</span>
                     </PointerHighlight>
@@ -36,7 +36,8 @@ const Hero = () => {
                 <div className="mb-8">
                   <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
                     Destination KP is a premier youth sports complex in Kings
-                    Park, Long Island, opening January 2026.
+                    Park, Long Island,opening 
+                    <span className="bg-gradient-to-r from-[#008fc1] via-[#00f099] to-[#008fc1] bg-clip-text text-transparent"> January 2026.</span>
                   </p>
                 </div>
                 <div className="w-full flex flex-col sm:flex-row gap-4">
