@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import { Button } from '@/app/components/ui/button';
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Button } from "@/app/components/ui/button";
 
 interface NavItem {
   title: string;
@@ -19,38 +19,50 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     handleScroll();
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   // Close mobile menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (isMobileMenuOpen && !(event.target as Element).closest('.mobile-menu')) {
+      if (
+        isMobileMenuOpen &&
+        !(event.target as Element).closest(".mobile-menu")
+      ) {
         setIsMobileMenuOpen(false);
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [isMobileMenuOpen]);
 
-  const handleNavLinkClick = (href: string, isHashLink?: boolean, isMobile = false) => {
+  const handleNavLinkClick = (
+    href: string,
+    isHashLink?: boolean,
+    isMobile = false
+  ) => {
     if (isHashLink) {
       if (window.location.pathname === "/" || href.startsWith("/#")) {
-        const hash = href.includes("#") ? href.substring(href.indexOf("#")) : "";
+        const hash = href.includes("#")
+          ? href.substring(href.indexOf("#"))
+          : "";
         if (hash) {
           const targetElement = document.querySelector(hash);
           if (targetElement) {
             const headerHeight = 80;
             const elementPosition = targetElement.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
+            const offsetPosition =
+              elementPosition + window.pageYOffset - headerHeight;
             window.scrollTo({ top: offsetPosition, behavior: "smooth" });
           }
         }
       } else {
-        window.location.href = `/${href.startsWith("#") ? href : "#" + href.split("#")[1]}`;
+        window.location.href = `/${
+          href.startsWith("#") ? href : "#" + href.split("#")[1]
+        }`;
       }
     }
     if (isMobile) {
@@ -72,11 +84,18 @@ const Navbar = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50  p-2 bg-[#131315]/10">
       <div className="container mx-auto max-w-7xl min-h-[60px] sm:h-16 flex items-center justify-between gap-2 sm:gap-4 px-3 sm:px-4 md:px-6 lg:px-8 rounded-xl transition-all duration-300 ease-in-out  backdrop-blur-md">
-        
         {/* Logo */}
-        <div className="flex-shrink-0 max-w-[140px] sm:max-w-[180px] md:max-w-none">
-          <Link href="/" className="font-bold text-lg sm:text-xl text-white hover:text-blue-400 transition-colors duration-300 block">
-            <span className="text-xl sm:text-2xl font-bold">DestinationKP</span>
+        <div className="flex-shrink-0 max-w-[160px] sm:max-w-[180px] md:max-w-none">
+          <Link
+            href="/"
+            className="font-bold text-lg sm:text-xl text-white  transition-colors duration-300 block"
+          >
+            <span className="text-xl sm:text-2xl font-bold">
+              Destination
+              <span className="bg-gradient-to-r from-[#008fc1] via-[#00f099] to-[#008fc1] bg-clip-text text-transparent">
+                KP
+              </span>
+            </span>
           </Link>
         </div>
 
@@ -88,7 +107,10 @@ const Navbar = () => {
                 key={item.title}
                 href={item.href || "#"}
                 className="text-gray-100 hover:text-white px-3 py-2 text-sm font-medium rounded-lg hover:bg-white/10 transition-colors"
-                onClick={() => item.href && handleNavLinkClick(item.href, item.isHomePageLink)}
+                onClick={() =>
+                  item.href &&
+                  handleNavLinkClick(item.href, item.isHomePageLink)
+                }
               >
                 {item.title}
               </Link>
@@ -98,15 +120,10 @@ const Navbar = () => {
 
         {/* Action Buttons & Mobile Menu Toggle - Right Aligned */}
         <div className="flex-shrink-0 flex items-center gap-1 sm:gap-2">
-        
-
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-3">
             <Link href="/login">
-              <Button className='cursor-pointer' >
-                Login
-              </Button>
-             
+              <Button className="cursor-pointer">Login</Button>
             </Link>
           </div>
 
@@ -135,7 +152,11 @@ const Navbar = () => {
                 href={item.href || "#"}
                 className="py-2.5 sm:py-3 text-sm sm:text-md text-gray-100 hover:text-white transition-colors"
                 onClick={() => {
-                  handleNavLinkClick(item.href || "#", item.isHomePageLink, true);
+                  handleNavLinkClick(
+                    item.href || "#",
+                    item.isHomePageLink,
+                    true
+                  );
                   setIsMobileMenuOpen(false);
                 }}
               >
