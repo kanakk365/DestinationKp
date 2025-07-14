@@ -82,8 +82,8 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50  p-2 bg-[#131315]/10">
-      <div className="container mx-auto max-w-7xl min-h-[60px] sm:h-16 flex items-center justify-between gap-2 sm:gap-4 px-3 sm:px-4 md:px-6 lg:px-8 rounded-xl transition-all duration-300 ease-in-out  backdrop-blur-md">
+    <header className="fixed top-0 left-0 right-0 z-50 p-2 bg-[#0b0b0b]">
+      <div className="container mx-auto max-w-7xl min-h-[60px] sm:h-16 flex items-center justify-between gap-2 sm:gap-4 px-3 sm:px-4 md:px-6 lg:px-8 rounded-xl transition-all duration-300 ease-in-out bg-[#0b0b0b] ">
         {/* Logo */}
         <div className="flex-shrink-0 max-w-[160px] sm:max-w-[180px] md:max-w-none">
           <Link
@@ -92,7 +92,7 @@ const Navbar = () => {
           >
             <span className="text-xl sm:text-2xl font-bold">
               Destination
-              <span className="bg-gradient-to-r from-[#008fc1] via-[#00f099] to-[#008fc1] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
                 KP
               </span>
             </span>
@@ -144,7 +144,7 @@ const Navbar = () => {
 
       {/* Mobile Navigation Menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden absolute top-[calc(100%+0.25rem)] sm:top-[calc(100%+0.5rem)] left-2 right-2 sm:left-4 sm:right-4 rounded-xl shadow-xl border border-white/20 bg-[#131315]/90 backdrop-blur-md max-h-[calc(100vh-6rem)] sm:max-h-[calc(100vh-8rem)] overflow-y-auto mobile-menu">
+        <div className="lg:hidden absolute top-[calc(100%+0.25rem)] sm:top-[calc(100%+0.5rem)] left-2 right-2 sm:left-4 sm:right-4 rounded-xl shadow-xl border border-gray-800/50 bg-[#131315] max-h-[calc(100vh-6rem)] sm:max-h-[calc(100vh-8rem)] overflow-y-auto mobile-menu">
           <div className="container mx-auto py-3 sm:py-4 px-3 sm:px-4 flex flex-col gap-2">
             {navigationItems.map((item) => (
               <Link

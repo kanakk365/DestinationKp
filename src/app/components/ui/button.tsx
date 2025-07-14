@@ -3,14 +3,14 @@ import { cn } from '@/lib/utils'
 import { VariantProps, cva } from "class-variance-authority";
 
 const buttonVariants = cva(
-    "relative group border text-foreground mx-auto text-center rounded-full",
+    "relative group border text-white mx-auto text-center rounded-full",
     {
         variants: {
             variant: {
-                default: " border-blue-500/20",
-                solid: "bg-blue-500 hover:bg-blue-600 text-white border-transparent hover:border-foreground/50 transition-all duration-200",
-                ghost: "border-transparent bg-transparent hover:border-zinc-600 hover:bg-white/10",
-                outline: "bg-white border border-gray-300 text-black hover:bg-gray-100 hover:border-blue-400 transition-all duration-200",
+                default: "border-blue-500/20 text-white",
+                solid: "bg-blue-500 hover:bg-blue-600 text-white border-transparent hover:border-blue-400/50 transition-all duration-200",
+                ghost: "border-transparent bg-transparent text-white hover:border-zinc-600 hover:bg-white/10",
+                outline: "bg-transparent border border-gray-600 text-white hover:bg-gray-800/50 hover:border-blue-400 transition-all duration-200",
             },
             size: {
                 default: "px-7 py-1.5 ",
@@ -37,9 +37,9 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
                 ref={ref}
                 {...props}
             >
-                <span className={cn("absolute h-px opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out inset-x-0 inset-y-0 bg-gradient-to-r w-3/4 mx-auto from-transparent dark:via-blue-500 via-blue-600 to-transparent hidden", neon && "block")} />
+                <span className={cn("absolute h-px opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out inset-x-0 inset-y-0 bg-gradient-to-r w-3/4 mx-auto from-transparent via-blue-500 to-transparent hidden", neon && "block")} />
                 {children}
-                <span className={cn("absolute group-hover:opacity-30 transition-all duration-500 ease-in-out inset-x-0 h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent dark:via-blue-500 via-blue-600 to-transparent hidden", neon && "block")} />
+                <span className={cn("absolute group-hover:opacity-30 transition-all duration-500 ease-in-out inset-x-0 h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-blue-500 to-transparent hidden", neon && "block")} />
             </button>
         );
     }

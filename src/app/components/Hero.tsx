@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <section
       id="voicebot-hero"
-      className="w-full bg-black text-white mt-20"
+      className="w-full bg-black text-white lg:mt-32"
     >
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="w-full flex flex-col lg:flex-row items-center justify-between py-16 lg:py-24">
@@ -29,7 +29,7 @@ const Hero = () => {
                     <PointerHighlight
                       pointerClassName="text-cyan-400"
                     >
-                      <span className="relative z-10 bg-gradient-to-r from-[#008fc1] via-[#00f099] to-[#008fc1] bg-clip-text text-transparent">Youth Sports</span>
+                      <span className="relative z-10 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Youth Sports</span>
                     </PointerHighlight>
                   </h1>
                 </div>
@@ -37,7 +37,7 @@ const Hero = () => {
                   <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
                     Destination KP is a premier youth sports complex in Kings
                     Park, Long Island,opening 
-                    <span className="bg-gradient-to-r from-[#008fc1] via-[#00f099] to-[#008fc1] bg-clip-text text-transparent"> January 2026.</span>
+                    <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent"> January 2026.</span>
                   </p>
                 </div>
                 <div className="w-full flex flex-col sm:flex-row gap-4">

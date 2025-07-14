@@ -12,7 +12,7 @@
   border-radius: 4px;
   box-sizing: content-box;
   padding: 1px;
-  background: linear-gradient(to right, rgb(0, 143, 193), rgb(0, 240, 153), rgb(0, 143, 193), rgb(0, 240, 153)) 0% 0% / 300% 100%;
+  background: linear-gradient(to right, rgb(147, 51, 234), rgb(37, 99, 235), rgb(147, 51, 234), rgb(37, 99, 235)) 0% 0% / 300% 100%;
 }
 .css-a0ww07:hover::before {
   opacity: 1;
@@ -23,15 +23,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #000000;
+  --foreground: #ededed;
 }
 
 body {
