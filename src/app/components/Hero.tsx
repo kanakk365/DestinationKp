@@ -2,15 +2,18 @@
 
 import React from "react";
 import { PointerHighlight } from "@/components/ui/pointer-highlight";
+import { Spotlight } from "@/components/ui/spotlight-new";
 
 const Hero = () => {
   return (
     <section
       id="voicebot-hero"
-      className="w-full bg-black text-white lg:mt-32"
+      className="relative w-full bg-black text-white pt-20 lg:mt-20 lg:pt-12 overflow-hidden"
     >
+     
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="w-full flex flex-col lg:flex-row items-center justify-between py-16 lg:py-24">
+         <Spotlight/>
+        <div className="w-full flex flex-col lg:flex-row items-center justify-between py-16 lg:py-24  ">
           {/* Left Content */}
           <div className="w-full lg:w-[60%] mb-12 lg:mb-0">
             <div className="w-full">
@@ -71,7 +74,7 @@ const Hero = () => {
           </div>
 
           {/* Right Content - Video */}
-          <div className="w-full lg:w-1/2 flex justify-center">
+          <div className="w-full lg:w-[40%] flex lg:justify-end lg:pr-4 ">
             <div className="w-96 h-96">
               <video
                 className="w-full h-full object-cover rounded-lg"

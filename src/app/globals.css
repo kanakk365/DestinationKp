@@ -180,3 +180,22 @@ body {
 .mobile-menu::-webkit-scrollbar-thumb:hover {
   background: #a8a8a8;
 }
+
+/* Company Logos Marquee Animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+/* Pause animation on hover */
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
