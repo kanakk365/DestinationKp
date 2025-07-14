@@ -30,7 +30,7 @@ const Hero = () => {
                   <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 ">
                     Future of Long Island{" "}
                     <PointerHighlight
-                      pointerClassName="text-cyan-400"
+                      pointerClassName="text-purple-600"
                     >
                       <span className="relative z-10 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Youth Sports</span>
                     </PointerHighlight>
