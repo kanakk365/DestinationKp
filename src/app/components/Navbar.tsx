@@ -82,7 +82,7 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-10 p-2 bg-[#0b0b0b]">
+    <header className="fixed z-70 top-0 backdrop-blur-3xl left-0 right-0 p-2 bg-[#0b0b0b]">
       <div className="container mx-auto max-w-7xl min-h-[60px] sm:h-16 flex items-center justify-between gap-2 sm:gap-4 px-3 sm:px-4 md:px-6 lg:px-8 rounded-xl transition-all duration-300 ease-in-out bg-[#0b0b0b] ">
         {/* Logo */}
         <div className="flex-shrink-0 max-w-[160px] sm:max-w-[180px] md:max-w-none">
@@ -100,7 +100,7 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Navigation Menu - Centered */}
-        <div className="hidden lg:flex flex-grow justify-center">
+        <div className="hidden lg:flex backdrop-blur-3xl flex-grow justify-center">
           <nav className="flex items-center space-x-4">
             {navigationItems.map((item) => (
               <Link
