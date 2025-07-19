@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { PointerHighlight } from "@/components/ui/pointer-highlight";
+import { Cover } from "@/components/ui/cover";
 import { Spotlight } from "@/components/ui/spotlight-new";
 
 const Hero = () => {
@@ -29,18 +29,16 @@ const Hero = () => {
           </HoverBorderGradient> */}
                   <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 ">
                     Future of Long Island{" "}
-                    <PointerHighlight
-                      pointerClassName="text-purple-600"
-                    >
-                      <span className="relative z-10 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Youth Sports</span>
-                    </PointerHighlight>
+                    <Cover>
+                      <span className="relative z-10 text-purple-500  ">Youth Sports</span>
+                    </Cover>
                   </h1>
                 </div>
                 <div className="mb-8">
                   <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
                     Destination KP is a premier youth sports complex in Kings
                     Park, Long Island,opening 
-                    <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent"> January 2026.</span>
+                    <span className="text-purple-700"> January 2026.</span>
                   </p>
                 </div>
                 <div className="w-full flex flex-col sm:flex-row gap-4">

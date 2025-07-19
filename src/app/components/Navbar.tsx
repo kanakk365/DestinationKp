@@ -92,7 +92,7 @@ const Navbar = () => {
           >
             <span className="text-xl sm:text-2xl font-bold">
               Destination
-              <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+              <span className="text-purple-700">
                 KP
               </span>
             </span>
